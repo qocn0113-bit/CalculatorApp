@@ -1,6 +1,5 @@
 package calculatorProject2.step3;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -90,10 +89,11 @@ public class App {
 
                 }
             }
+
             System.out.println("특정 값보다 큰 결과값을 조회하시겠습니까? 조회: yes , 넘어가기: 아무 키");
             if (!calculator.getResults().isEmpty()) {
                 if (scanner.next().equals("yes")) {
-                    double standard = ArithmeticCalculator.readStandard(scanner);
+                    double standard = calculator.getStandard(scanner);
                     List<Double> filteredList = calculator.findResultsGreaterThan(standard);
                     System.out.println("기준값보다 큰 결과값: " + filteredList);
                 }

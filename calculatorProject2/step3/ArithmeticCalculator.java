@@ -36,7 +36,7 @@ public class ArithmeticCalculator {
 
     }
 
-    public static double readStandard(Scanner scanner) {
+    private static double readStandard(Scanner scanner) {
         while (true) {
             System.out.print("기준값을 입력하세요: ");
             if (!scanner.hasNextDouble()) {
@@ -53,6 +53,11 @@ public class ArithmeticCalculator {
             return standard;
         }
     }
+
+    public double getStandard(Scanner scanner) {
+        return readStandard(scanner);
+    }
+
 
     public List<Double> findResultsGreaterThan(double standard) {
         return results.stream()
